@@ -16,9 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 import gt.com.umg.model.Ventas;
 import gt.com.umg.services.api.VentaService;
 
-@RestController
 //@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST})
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "*")
+
+@RestController
+@CrossOrigin(origins = "http://localhost:8081")
 @RequestMapping(value="/api/v1")
 public class VentaRestController {
 

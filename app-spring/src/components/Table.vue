@@ -31,13 +31,13 @@
     <!-- Show modal register venta-->
     <Dialog :style="{width: '50vh'}" header="Registrar nueva venta" :visible.sync="displayModal" :modal="true" class="p-grid p-dir-col">
       <div class="p-col">
-        <InputNumber v-model="nuevaVenta.unidades" placeholder="Unidades" />
+        <InputNumber v-model="nuevaVenta.unidades" placeholder="Unidades" required/>
       </div>
       <div class="p-col">
-        <InputNumber v-model="nuevaVenta.total" mode="currency" currency="GTQ" locale="es-GT" placeholder="Total" />
+        <InputNumber v-model="nuevaVenta.total" mode="currency" currency="GTQ" locale="es-GT" placeholder="Total" required/>
       </div>
       <div class="p-col">
-        <Calendar v-model="nuevaVenta.fecha" dateFormat="yy/mm/dd" placeholder="Fecha"/>
+        <Calendar v-model="nuevaVenta.fecha" dateFormat="yy/mm/dd" placeholder="Fecha" required/>
       </div>
       <template #footer>
         <Button label="Guardar Venta" icon="pi pi-save" @click="agregarNuevaVentaStore" />
